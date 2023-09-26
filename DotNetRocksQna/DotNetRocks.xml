@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+
+    <channel>
+        <ttl>30</ttl>
+        <title>.NET Rocks!</title>
+        <link>http://www.dotnetrocks.com</link>
+        <language>en-us</language>
+        <description>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</description>
+        <copyright>Copyright &#xA9; 2002-2023 by Pwop Productions</copyright>
+        <managingEditor>carl@franklins.net (Carl Franklin)</managingEditor>
+        <webMaster>carl@franklins.net (Carl Franklin)</webMaster>
+        <rating>PG</rating>
+        <pubDate>Mon, 15 Feb 2016 00:00:00 EST</pubDate>
+        <lastBuildDate>Thu, 21 Sep 2023 00:00:00 EST</lastBuildDate>
+        <cloud domain="http://www.dotnetrocks.com" port="80" path="/RPC2" registerProcedure="pingMe" protocol="soap"> </cloud>
+        <atom:link href="http://www.pwop.com/feed.aspx?show=dotnetrocks" rel="self" type="application/rss+xml" />
+        <image>
+            <url>http://www.pwop.com/itunes_dnr2.jpg</url>
+            <title>.NET Rocks!</title>
+            <link>http://www.dotnetrocks.com</link>
+            <width>144</width>
+            <height>300</height>
+            <description>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</description>
+        </image>
+        <category>Programming</category><category>Talk</category><category>VB.NET</category><category>ASP.NET</category><category>Podcast</category>
+
+        <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:author>Carl Franklin</itunes:author>
+        <itunes:summary>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:summary>
+        <itunes:owner>
+            <itunes:name>Carl Franklin</itunes:name>
+            <itunes:email>carl@franklins.net</itunes:email>
+        </itunes:owner>
+
+        <itunes:image href="http://www.pwop.com/itunes_dnr2.jpg" />
+        <itunes:category text="Technology"><itunes:category text="Software How-To"/></itunes:category><itunes:category text="Technology"><itunes:category text="Gadgets"/></itunes:category><itunes:category text="Technology"><itunes:category text="Software How-To"/></itunes:category>
+
+
+
+        <item>
+            <title>Data Science and UX with Grishma Jena</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1864</link>
+            <pubDate>Thu, 21 Sep 2023 00:00:00 EDT</pubDate>
+            <description>Data Science and UX should be the best of friends! While at the Copenhagen Developer Festival, Carl and Richard talked to Grishma Jena about her work in data science at IBM - and working closely with the UX teams to understand how customers use software and the opportunities to improve it. Grishma talks about the quantitative side of analytics regarding application telemetry, including the ability to predict when a customer is about to abandon an application. The conversation also digs into using modern machine learning to analyze quantitative data, such as comments in surveys - could you sort that kind of data by sentiment or actionability? Improve your UX with data!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1864">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1864</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>Data Science and UX should be the best of friends! While at the Copenhagen Developer Festival, Carl and Richard talked to Grishma Jena about her work in data science at IBM - and working closely with the UX teams to understand how customers use software and the opportunities to improve it. Grishma talks about the quantitative side of analytics regarding application telemetry, including the ability to predict when a customer is about to abandon an application. The conversation also digs into using modern machine learning to analyze quantitative data, such as comments in surveys - could you sort that kind of data by sentiment or actionability? Improve your UX with data!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56876523/download.mp3" length="46266871" type="audio/mp3" />
+
+            <itunes:duration>00:48:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>IoT Development using Particle Photon with Colleen Lavin</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1863</link>
+            <pubDate>Thu, 14 Sep 2023 00:00:00 EDT</pubDate>
+            <description>What can you do with a Particle Photon? While in an aluminum Airstream trailer in a thunderstorm at the Copenhagen Developers Festival, Carl and Richard talked to Colleen Lavin about her work with the Particle Photon IoT device - and its many maker possibilities! Colleen talks about making it easy to start building a device - but the struggle with so many choices to actually pick a project. The conversation also digs into making production versions of your device so that they are smaller, cheaper, and very reliable - it's a fun time to be a maker!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1863">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1863</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>What can you do with a Particle Photon? While in an aluminum Airstream trailer in a thunderstorm at the Copenhagen Developers Festival, Carl and Richard talked to Colleen Lavin about her work with the Particle Photon IoT device - and its many maker possibilities! Colleen talks about making it easy to start building a device - but the struggle with so many choices to actually pick a project. The conversation also digs into making production versions of your device so that they are smaller, cheaper, and very reliable - it's a fun time to be a maker!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56796194/download.mp3" length="48932197" type="audio/mp3" />
+
+            <itunes:duration>00:51:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Mediatr with Jimmy Bogard</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1862</link>
+            <pubDate>Thu, 07 Sep 2023 00:00:00 EDT</pubDate>
+            <description>How about some in-process messaging with no dependencies? Carl and Richard chat with Jimmy Bogard about his work with MediatR, a simple mediator pattern implementation in .NET. Jimmy talks about how MediatR emerged from his work with customer applications having controllers and/or managers that slowly got bigger and more complicated... and how they became difficult to maintain. Using the mediator pattern to break down those blocks of code into more manageable chunks needed a bit of tooling that was cut and pasted from project-to-project until MediatR was born!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1862">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1862</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How about some in-process messaging with no dependencies? Carl and Richard chat with Jimmy Bogard about his work with MediatR, a simple mediator pattern implementation in .NET. Jimmy talks about how MediatR emerged from his work with customer applications having controllers and/or managers that slowly got bigger and more complicated... and how they became difficult to maintain. Using the mediator pattern to break down those blocks of code into more manageable chunks needed a bit of tooling that was cut and pasted from project-to-project until MediatR was born!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56720229/download.mp3" length="53127253" type="audio/mp3" />
+
+            <itunes:duration>00:55:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Applied Large Language Models with Brian MacKay</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1861</link>
+            <pubDate>Thu, 31 Aug 2023 00:00:00 EDT</pubDate>
+            <description>How can a large language model help your application? Carl and Richard talk to Brian MacKay about his work with large language models, including ChatGPT - and others! Brian talks about how LLMs continue to evolve and the limitations they have. But identifying language inside your applications can be powerful, and Brian talks through a few scenarios his company uses in production today. Work could you be taking advantage of today!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1861">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1861</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How can a large language model help your application? Carl and Richard talk to Brian MacKay about his work with large language models, including ChatGPT - and others! Brian talks about how LLMs continue to evolve and the limitations they have. But identifying language inside your applications can be powerful, and Brian talks through a few scenarios his company uses in production today. Work could you be taking advantage of today!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56639156/download.mp3" length="62624540" type="audio/mp3" />
+
+            <itunes:duration>01:05:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Minimal Architecture with Jeremy Miller</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1860</link>
+            <pubDate>Thu, 24 Aug 2023 00:00:00 EDT</pubDate>
+            <description>How much architectural ceremony is enough? Carl and Richard talk to Jeremy Miller about his minimal approach to architecture when building software, including his products Wolverine and Marten. Jeremy talks about how good tooling can simplify architecture, ultimately by writing less code - so that you are writing only the code that is unique to your customer needs. </description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1860">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1860</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How much architectural ceremony is enough? Carl and Richard talk to Jeremy Miller about his minimal approach to architecture when building software, including his products Wolverine and Marten. Jeremy talks about how good tooling can simplify architecture, ultimately by writing less code - so that you are writing only the code that is unique to your customer needs. </itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56569880/download.mp3" length="53652210" type="audio/mp3" />
+
+            <itunes:duration>00:56:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Chocolatey in 2023 with Gary Ewan Park</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1859</link>
+            <pubDate>Thu, 17 Aug 2023 00:00:00 EDT</pubDate>
+            <description>How is Chocolatey evolving? Carl and Richard talk to Gary Ewan Park about the latest with the open-source Windows package management solution. Gary discusses some of the differences between the various package managers for Windows these days, including WinGet. Each product has its niche, and Chocolatey has done a good job of evolving into a broader product, including Chocolatey for Business, to allow a view of applications installed across all your machines - and being able to push updates out to them. </description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1859">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1859</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How is Chocolatey evolving? Carl and Richard talk to Gary Ewan Park about the latest with the open-source Windows package management solution. Gary discusses some of the differences between the various package managers for Windows these days, including WinGet. Each product has its niche, and Chocolatey has done a good job of evolving into a broader product, including Chocolatey for Business, to allow a view of applications installed across all your machines - and being able to push updates out to them. </itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56496230/download.mp3" length="55974809" type="audio/mp3" />
+
+            <itunes:duration>00:58:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Leveling up your Architecture Game with Thomas Betts</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1858</link>
+            <pubDate>Thu, 10 Aug 2023 00:00:00 EDT</pubDate>
+            <description>How's your architecture game? Carl and Richard talk to Thomas Betts about being a better architect. Thomas focuses on the key aspect - communication! An effective architect can talk to all the stakeholders in the language of the stakeholder, whether that's speaking business with business stakeholders, coding with developers, and understanding the needs of the security and operations folks. All those aspects (and more) go into an effective architecture and then come the changes as the implementation challenges happen. The conversation also digs into the importance of documentation to know why decisions were made and how to change them as you respond to changing needs and landscapes. </description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1858">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1858</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How's your architecture game? Carl and Richard talk to Thomas Betts about being a better architect. Thomas focuses on the key aspect - communication! An effective architect can talk to all the stakeholders in the language of the stakeholder, whether that's speaking business with business stakeholders, coding with developers, and understanding the needs of the security and operations folks. All those aspects (and more) go into an effective architecture and then come the changes as the implementation challenges happen. The conversation also digs into the importance of documentation to know why decisions were made and how to change them as you respond to changing needs and landscapes. </itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56414010/download.mp3" length="58476713" type="audio/mp3" />
+
+            <itunes:duration>01:01:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>The Ethics of Large Language Models with Amber McKenzie</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1857</link>
+            <pubDate>Thu, 03 Aug 2023 00:00:00 EDT</pubDate>
+            <description>Large Language Models like GPT-4 are all the rage - how do we use them well? Carl and Richard talk to Amber McKenzie about the challenges and concerns around LLMs, especially regarding the data involved. Amber talks about the risks of creating products around LLMs while the technology is so young and constantly evolving, especially with how the general public reacts to conversational AI. Education is key, and constantly fact-checking - good advice for a lot of technology, but LLMs are making fact checking even more important!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1857">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1857</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>Large Language Models like GPT-4 are all the rage - how do we use them well? Carl and Richard talk to Amber McKenzie about the challenges and concerns around LLMs, especially regarding the data involved. Amber talks about the risks of creating products around LLMs while the technology is so young and constantly evolving, especially with how the general public reacts to conversational AI. Education is key, and constantly fact-checking - good advice for a lot of technology, but LLMs are making fact checking even more important!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56352113/download.mp3" length="52670842" type="audio/mp3" />
+
+            <itunes:duration>00:55:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Modular Monoliths with Layla Porter</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1856</link>
+            <pubDate>Thu, 27 Jul 2023 00:00:00 EDT</pubDate>
+            <description>Microservices or Monoliths? Carl and Richard talk to Layla Porter about choosing a middle ground between microservices and monoliths, with modular monoliths. Layla talks about the pushback from the community around microservices and the insistence that there is "one right way." Monoliths have their advantages until they are a problem - but that doesn't mean that re-architecting everything is the right way to go. Chipping off parts of the monolith into satellite modules strikes a balance of flexibility and scalability - and opens the door to accessing the power of bus architectures when needed!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1856">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1856</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>Microservices or Monoliths? Carl and Richard talk to Layla Porter about choosing a middle ground between microservices and monoliths, with modular monoliths. Layla talks about the pushback from the community around microservices and the insistence that there is "one right way." Monoliths have their advantages until they are a problem - but that doesn't mean that re-architecting everything is the right way to go. Chipping off parts of the monolith into satellite modules strikes a balance of flexibility and scalability - and opens the door to accessing the power of bus architectures when needed!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56240649/download.mp3" length="53854920" type="audio/mp3" />
+
+            <itunes:duration>00:56:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Multi-Model Data Stores with Ted Neward</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1855</link>
+            <pubDate>Thu, 20 Jul 2023 00:00:00 EDT</pubDate>
+            <description>Databases continue to evolve! Carl and Richard talk to Ted Neward about multi-model data stores - which, these days, are most databases! Ted talks about how SQL and NoSQL are not that different - it's only a query engine. But how do you store your data? Today multi-model databases store data with multiple storage engines, and so can store your data in the most appropriate form. There are lots of choices, and it's worth digging deeper into your existing data stores, as well as the new ones available!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1855">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1855</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>Databases continue to evolve! Carl and Richard talk to Ted Neward about multi-model data stores - which, these days, are most databases! Ted talks about how SQL and NoSQL are not that different - it's only a query engine. But how do you store your data? Today multi-model databases store data with multiple storage engines, and so can store your data in the most appropriate form. There are lots of choices, and it's worth digging deeper into your existing data stores, as well as the new ones available!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56161667/download.mp3" length="58926855" type="audio/mp3" />
+
+            <itunes:duration>01:01:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Fluent Assertions with Dennis Doomen</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1854</link>
+            <pubDate>Thu, 13 Jul 2023 00:00:00 EDT</pubDate>
+            <description>What can we do to make testing easier? Carl and Richard talk to Dennis Doomen about Fluent Assertions, an open-source set of extension methods to help write better tests. Dennis talks about working on Fluent Assertions for over a decade and the great team of folks that have helped it grow. With tens of millions of downloads, you should check it out! The conversation also digs into how these types of open-source projects don't make money, even though they help many people. Could we fix that? </description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1854">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1854</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>What can we do to make testing easier? Carl and Richard talk to Dennis Doomen about Fluent Assertions, an open-source set of extension methods to help write better tests. Dennis talks about working on Fluent Assertions for over a decade and the great team of folks that have helped it grow. With tens of millions of downloads, you should check it out! The conversation also digs into how these types of open-source projects don't make money, even though they help many people. Could we fix that? </itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56080332/download.mp3" length="56483884" type="audio/mp3" />
+
+            <itunes:duration>00:59:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Scaling a Monolith with Derek Comartin</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1853</link>
+            <pubDate>Thu, 06 Jul 2023 00:00:00 EDT</pubDate>
+            <description>How do you scale a monolith? Carl and Richard talk to Derek Comartin about his blog posts and YouTube series around scaling a monolith. Derek talks about the tendency for folks to want to split a monolith into microservices without assessing if it will make a difference. There is no one right way! The conversation digs into different approaches to scaling - up, out, using caching, queuing, and more! There are many approaches to scaling your applications, and yes, microservices are an option, but there are many others!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1853">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1853</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How do you scale a monolith? Carl and Richard talk to Derek Comartin about his blog posts and YouTube series around scaling a monolith. Derek talks about the tendency for folks to want to split a monolith into microservices without assessing if it will make a difference. There is no one right way! The conversation digs into different approaches to scaling - up, out, using caching, queuing, and more! There are many approaches to scaling your applications, and yes, microservices are an option, but there are many others!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/56009690/download.mp3" length="56302071" type="audio/mp3" />
+
+            <itunes:duration>00:59:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Going Full Time on Open Source with Shaun Walker</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1852</link>
+            <pubDate>Thu, 29 Jun 2023 00:00:00 EDT</pubDate>
+            <description>Can you quit your job and work full-time on your open-source project? Carl and Richard talk to Shaun Walker about his recent move to focus on Oqtane, the open-source application framework and CMS he has been developing for the past few years. Shaun talks about recognizing when an open-source project has matured to the point that it is being held back by not also providing a commercial license. For some folks, a commercial license is not an option - they need it to be able to use the software within the company. Then comes the tricky part: Setting up a business, and balancing the needs of the open-source community with the commercial customers. It isn't easy, but it can be done!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1852">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1852</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>Can you quit your job and work full-time on your open-source project? Carl and Richard talk to Shaun Walker about his recent move to focus on Oqtane, the open-source application framework and CMS he has been developing for the past few years. Shaun talks about recognizing when an open-source project has matured to the point that it is being held back by not also providing a commercial license. For some folks, a commercial license is not an option - they need it to be able to use the software within the company. Then comes the tricky part: Setting up a business, and balancing the needs of the open-source community with the commercial customers. It isn't easy, but it can be done!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/55430209/download.mp3" length="60186584" type="audio/mp3" />
+
+            <itunes:duration>01:03:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Azure Developer CLI with Savannah Ostrowski</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1851</link>
+            <pubDate>Thu, 22 Jun 2023 00:00:00 EDT</pubDate>
+            <description>How do you get your app running in Azure? Carl and Richard talk to Savannah Ostrowski about Azure Developer CLI (azd), an open-source tool to help developers using .NET, Javascript/Typescript, Python, Java, and more to get deployed into Azure. Savannah talks about staying high-level with azd commands, keeping the complexity of deployment pipelines in tools you already know how to use, like Bicep and Terraform. The conversation digs into the templating system to help assemble all the platforms and elements of an Azure deployment, depending on your application. There are a ton of options - check it out!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1851">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1851</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How do you get your app running in Azure? Carl and Richard talk to Savannah Ostrowski about Azure Developer CLI (azd), an open-source tool to help developers using .NET, Javascript/Typescript, Python, Java, and more to get deployed into Azure. Savannah talks about staying high-level with azd commands, keeping the complexity of deployment pipelines in tools you already know how to use, like Bicep and Terraform. The conversation digs into the templating system to help assemble all the platforms and elements of an Azure deployment, depending on your application. There are a ton of options - check it out!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/54653329/download.mp3" length="50365379" type="audio/mp3" />
+
+            <itunes:duration>00:52:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Building Apps using OpenAI with Mark Miller</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1850</link>
+            <pubDate>Thu, 15 Jun 2023 00:00:00 EDT</pubDate>
+            <description>How can OpenAI help you program faster? Carl and Richard talk to Mark Miller about his experiments with OpenAI and CodeRush. Mark talks about the power of building agents to analyze code to write comments and tests - in parallel so that multiple agents can run simultaneously. Then the conversation turns to the potential of a voice interface as an effective way to work with Visual Studio - you were talking anyway!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1850">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1850</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How can OpenAI help you program faster? Carl and Richard talk to Mark Miller about his experiments with OpenAI and CodeRush. Mark talks about the power of building agents to analyze code to write comments and tests - in parallel so that multiple agents can run simultaneously. Then the conversation turns to the potential of a voice interface as an effective way to work with Visual Studio - you were talking anyway!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/54415963/download.mp3" length="56432893" type="audio/mp3" />
+
+            <itunes:duration>00:59:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>OpenTelemetry with Laïla Bougriâ</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1849</link>
+            <pubDate>Thu, 08 Jun 2023 00:00:00 EDT</pubDate>
+            <description>What can OpenTelemetry do for you? While at Techorama in Belgium, Carl and Richard talked to Laïla Bougriâ about her experiences with the open-source library that can help give you more insight into the behavior of your applications. Laïla talks about being able to instrument your applications from top-to-bottom, regardless of platforms or development stacks. The conversation digs into the differences between logging, tracing, and telemetry - and how each aspect adds value to understand what your applications are doing, and how you can make them better!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1849">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1849</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>What can OpenTelemetry do for you? While at Techorama in Belgium, Carl and Richard talked to Laïla Bougriâ about her experiences with the open-source library that can help give you more insight into the behavior of your applications. Laïla talks about being able to instrument your applications from top-to-bottom, regardless of platforms or development stacks. The conversation digs into the differences between logging, tracing, and telemetry - and how each aspect adds value to understand what your applications are doing, and how you can make them better!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/54133500/download.mp3" length="48476204" type="audio/mp3" />
+
+            <itunes:duration>00:50:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>No Free Lunch in Machine Learning with Jodie Burchell</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1848</link>
+            <pubDate>Thu, 01 Jun 2023 00:00:00 EDT</pubDate>
+            <description>When it comes to machine learning, there is no free lunch! While at Techorama in Antwerp, Carl and Richard talked to Dr. Jodie Burchell about her experiences working with machine learning models, including the large language models that drive tools like ChatGPT. Jodie starts with a great explanation of how these machine learning models are built - and there is a lot to it! This leads to a conversation about the limitations of those models and how they could be improved further. There's a lot of hype around LLMs right now - it will pass eventually, but in the meantime, be thoughtful of how you use these experimental technologies!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1848">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1848</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>When it comes to machine learning, there is no free lunch! While at Techorama in Antwerp, Carl and Richard talked to Dr. Jodie Burchell about her experiences working with machine learning models, including the large language models that drive tools like ChatGPT. Jodie starts with a great explanation of how these machine learning models are built - and there is a lot to it! This leads to a conversation about the limitations of those models and how they could be improved further. There's a lot of hype around LLMs right now - it will pass eventually, but in the meantime, be thoughtful of how you use these experimental technologies!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/54061905/download.mp3" length="53196635" type="audio/mp3" />
+
+            <itunes:duration>00:55:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>PHP and WebAssembly with Jakub Míšek</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1847</link>
+            <pubDate>Thu, 25 May 2023 00:00:00 EDT</pubDate>
+            <description>The power of .NET means PHP can run in the browser efficiently! Carl and Richard talk to Jakub Míšek about PeachPie using WASM. Jakub talks about how easy it was to deploy PeachPie, the .NET implementation of PHP, into WebAssembly, much like Blazor works. Then the tricky bit starts - PHP is a server-side technology, so many of the constructs are based on trips to a server. That doesn't mean there aren't solutions, but they need some thinking through. The question is, do we want to run WordPress in a browser?</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1847">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1847</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>The power of .NET means PHP can run in the browser efficiently! Carl and Richard talk to Jakub Míšek about PeachPie using WASM. Jakub talks about how easy it was to deploy PeachPie, the .NET implementation of PHP, into WebAssembly, much like Blazor works. Then the tricky bit starts - PHP is a server-side technology, so many of the constructs are based on trips to a server. That doesn't mean there aren't solutions, but they need some thinking through. The question is, do we want to run WordPress in a browser?</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/53992333/download.mp3" length="50864840" type="audio/mp3" />
+
+            <itunes:duration>00:53:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Immutable Architectures with Michael Perry</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1846</link>
+            <pubDate>Thu, 18 May 2023 00:00:00 EDT</pubDate>
+            <description>What's an immutable architecture, and why do you want one? Carl and Richard talk to Michael Perry about his book The Art of Immutable Architecture and the power of historical models. Michael talks about different designs for immutability, the ability to always look back through data, to avoid conflict between resources, and the advantages of eventual consistency. As Michael says, you already use immutable architecture - look at Git and how you only add new files to the system, always able to get back to a previous state! The conversation dives into implementing architecture in a way that helps to show where immutability makes sense.</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1846">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1846</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>What's an immutable architecture, and why do you want one? Carl and Richard talk to Michael Perry about his book The Art of Immutable Architecture and the power of historical models. Michael talks about different designs for immutability, the ability to always look back through data, to avoid conflict between resources, and the advantages of eventual consistency. As Michael says, you already use immutable architecture - look at Git and how you only add new files to the system, always able to get back to a previous state! The conversation dives into implementing architecture in a way that helps to show where immutability makes sense.</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/53913136/download.mp3" length="50394636" type="audio/mp3" />
+
+            <itunes:duration>00:52:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+        <item>
+            <title>Entity Framework Tooling with Erik Ejlskov Jensen</title>
+            <link>http://www.dotnetrocks.com/default.aspx?ShowNum=1845</link>
+            <pubDate>Thu, 11 May 2023 00:00:00 EDT</pubDate>
+            <description>How do you do more with Entity Framework? Carl and Richard talk to Erik Ejlskov Jensen about his work contributing to Entity Framework and creating tools to make Entity Framework easier to use. Erik talks about how EF has continued to evolve, including some significant performance optimizations. The conversation also explores code-first vs. database-first - although Erik falls firmly into the schema-first mindset. There's more coming for Entity Framework; it's worth your time to get the most from it!</description>
+            <source url="http://www.dotnetrocks.com/default.aspx?ShowNum=1845">.NET Rocks!</source>
+            <guid isPermaLink="true">http://www.dotnetrocks.com/default.aspx?ShowNum=1845</guid>
+            <itunes:author>Carl Franklin</itunes:author>
+            <itunes:subtitle>.NET Rocks! is an Internet Audio Talk Show for Microsoft .NET Developers.</itunes:subtitle>
+            <itunes:summary>How do you do more with Entity Framework? Carl and Richard talk to Erik Ejlskov Jensen about his work contributing to Entity Framework and creating tools to make Entity Framework easier to use. Erik talks about how EF has continued to evolve, including some significant performance optimizations. The conversation also explores code-first vs. database-first - although Erik falls firmly into the schema-first mindset. There's more coming for Entity Framework; it's worth your time to get the most from it!</itunes:summary>
+            <enclosure url="https://api.spreaker.com/v2/episodes/53815614/download.mp3" length="56521082" type="audio/mp3" />
+
+            <itunes:duration>00:59:00</itunes:duration>
+            <itunes:keywords>540238</itunes:keywords>
+        </item>
+
+
+    </channel>
+</rss>
