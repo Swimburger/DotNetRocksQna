@@ -9,8 +9,6 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.Connectors.Memory.Chroma;
 using Microsoft.SemanticKernel.Text;
 
-const string transcriptPluginName = "TranscriptPlugin";
-
 var config = new ConfigurationBuilder()
     .AddEnvironmentVariables()
     .AddUserSecrets<Program>()
@@ -19,9 +17,15 @@ var config = new ConfigurationBuilder()
 
 using var loggerFactory = LoggerFactory.Create(builder => { builder.SetMinimumLevel(0); });
 var kernel = new KernelBuilder()
-    .WithOpenAIChatCompletionService("gpt-3.5-turbo", config["OpenAI:ApiKey"])
+    .WithOpenAIChatCompletionService(
+        "gpt-3.5-turbo",
+        config["OpenAI:ApiKey"] ?? throw new Exception("OpenAI:ApiKey configuration required.")
+    )
     .WithMemoryStorage(new ChromaMemoryStore("http://localhost:8000"))
-    .WithOpenAITextEmbeddingGenerationService("text-embedding-ada-002", config["OpenAI:ApiKey"])
+    .WithOpenAITextEmbeddingGenerationService(
+        "text-embedding-ada-002",
+        config["OpenAI:ApiKey"] ?? throw new Exception("OpenAI:ApiKey configuration required.")
+    )
     .WithLoggerFactory(loggerFactory)
     .Build();
 
@@ -88,7 +92,10 @@ async Task TranscribeShow(Show show)
     }
 
     ConsoleSpinner.Start("Transcribing show");
-    var transcribeFunction = kernel.Skills.GetFunction(transcriptPluginName, "Transcribe");
+    var transcribeFunction = kernel.Skills.GetFunction(
+        TranscriptPlugin.PluginName, 
+        TranscriptPlugin.TranscribeFunctionName
+    );
     var context = kernel.CreateNewContext();
     context.Variables["audioUrl"] = show.AudioUrl;
     await transcribeFunction.InvokeAsync(context);
@@ -143,7 +150,7 @@ void RegisterPlugins()
 {
     var transcriptPlugin = kernel.ImportSkill(
         new TranscriptPlugin(config["AssemblyAI:ApiKey"]),
-        transcriptPluginName
+        TranscriptPlugin.PluginName
     );
 
     var dotNetRocksPlugin = kernel.ImportSkill(
