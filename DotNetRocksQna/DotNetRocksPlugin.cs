@@ -1,6 +1,6 @@
 using System.ComponentModel;
-using System.Text;
-using System.Text.Json.Nodes;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Web;
 using System.Xml;
 using Microsoft.SemanticKernel.SkillDefinition;
@@ -24,25 +24,33 @@ public class DotNetRocksPlugin
         doc.Load(rssFeedStream);
 
         var nodes = doc.DocumentElement.SelectNodes("//item");
-        var jsonArray = new JsonArray();
-        foreach (XmlNode node in nodes)
+        var shows = new List<Show>();
+        for (int showIndex = 0; showIndex < nodes.Count; showIndex++)
         {
+            var node = nodes[showIndex];
             var link = node["link"].InnerText;
             var queryString = HttpUtility.ParseQueryString(new Uri(link).Query);
             var showNumber = int.Parse(queryString["ShowNum"]);
             var title = node["title"].InnerText;
             var audioUrl = node["enclosure"].Attributes["url"].Value;
 
-            var jsonObject = new JsonObject
+            shows.Add(new Show
             {
-                ["show_number"] = showNumber,
-                ["title"] = title,
-                ["show_link"] = link,
-                ["audio_url"] = audioUrl
-            };
-            jsonArray.Add(jsonObject);
+                Index = showIndex + 1,
+                Number = showNumber,
+                Title = title,
+                AudioUrl = audioUrl
+            });
         }
 
-        return jsonArray.ToString();
+        return JsonSerializer.Serialize(shows);
     }
+}
+
+public class Show
+{
+    [JsonPropertyName("index")] public int Index { get; set; }
+    [JsonPropertyName("show_number")] public int Number { get; set; }
+    [JsonPropertyName("title")] public string Title { get; set; }
+    [JsonPropertyName("audio_url")] public string AudioUrl { get; set; }
 }
