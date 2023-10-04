@@ -4,17 +4,17 @@ namespace DotNetRocksQna;
 
 public static class ConsoleSpinner
 {
-    private static TaskCompletionSource? _completionSource;
+    private static TaskCompletionSource completionSource;
     
     public static void Start(string status)
     {
-        _completionSource = new TaskCompletionSource();
+        completionSource = new TaskCompletionSource();
         AnsiConsole.Status()
-            .StartAsync(status, _ => _completionSource.Task);
+            .StartAsync(status, _ => completionSource.Task);
     }
 
     public static void Stop()
     {
-        _completionSource?.SetResult();
+        completionSource?.SetResult();
     }
 }
