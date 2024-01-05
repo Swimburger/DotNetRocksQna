@@ -3,18 +3,17 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Web;
 using System.Xml;
-using Microsoft.SemanticKernel.SkillDefinition;
+using Microsoft.SemanticKernel;
 
 namespace DotNetRocksQna;
 
 public class DotNetRocksPlugin
 {
-    public const string PluginName = "DotNetRocksPlugin";
     private const string RssFeedUrl = "https://pwop.com/feed.aspx?show=dotnetrocks";
 
     public const string GetShowsFunctionName = nameof(GetShows);
 
-    [SKFunction, Description("Get shows of the .NET Rocks! podcast.")]
+    [KernelFunction, Description("Get shows of the .NET Rocks! podcast.")]
     public async Task<string> GetShows()
     {
         using var httpClient = new HttpClient();
@@ -25,7 +24,7 @@ public class DotNetRocksPlugin
 
         var nodes = doc.DocumentElement.SelectNodes("//item");
         var shows = new List<Show>();
-        for (int showIndex = 0; showIndex < nodes.Count; showIndex++)
+        for (var showIndex = 0; showIndex < nodes.Count; showIndex++)
         {
             var node = nodes[showIndex];
             var link = node["link"].InnerText;
