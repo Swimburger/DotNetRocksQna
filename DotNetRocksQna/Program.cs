@@ -12,17 +12,22 @@ namespace DotNetRocksQna;
 
 internal class Program
 {
-    private const string CompletionModel = "gpt-3.5-turbo";
+    private const string CompletionModel = "gpt-4-turbo-preview";
     private const string EmbeddingsModel = "text-embedding-ada-002";
     private const string ChromeDbEndpoint = "http://localhost:8000";
 
     private static IConfiguration config;
     private static Kernel kernel;
     private static ISemanticTextMemory memory;
+    private static CancellationToken ct;
 
     public static async Task Main(string[] args)
     {
-        config = CreateConfig();
+        var cts = new CancellationTokenSource();
+        ct = cts.Token;
+        Console.CancelKeyPress += (_, _) => { cts.Cancel(); };
+
+        config = CreateConfig(args);
         kernel = CreateKernel();
         memory = CreateMemory();
 
@@ -31,21 +36,20 @@ internal class Program
         await AskQuestions(show);
     }
 
-    private static IConfiguration CreateConfig() => new ConfigurationBuilder()
-        .AddUserSecrets<Program>().Build();
+    private static IConfiguration CreateConfig(string[] args) => new ConfigurationBuilder()
+        .AddUserSecrets<Program>()
+        .AddCommandLine(args)
+        .Build();
 
     private static string GetOpenAiApiKey() => config["OpenAI:ApiKey"] ??
                                                throw new Exception("OpenAI:ApiKey configuration required.");
 
-    private static string GetAssemblyAiApiKey() => config["AssemblyAI:ApiKey"] ??
-                                                   throw new Exception("AssemblyAI:ApiKey configuration required.");
-
     private static Kernel CreateKernel()
     {
         var builder = Kernel.CreateBuilder()
-            .AddOpenAIChatCompletion(CompletionModel, GetOpenAiApiKey());
+            .AddOpenAIChatCompletion(CompletionModel, GetOpenAiApiKey())
+            .AddAssemblyAIPlugin(config);
 
-        builder.Plugins.AddFromObject(new TranscriptPlugin(GetAssemblyAiApiKey()));
         builder.Plugins.AddFromType<DotNetRocksPlugin>();
 
         return builder.Build();
@@ -67,7 +71,8 @@ internal class Program
         {
             var shows = (await kernel.InvokeAsync(
                 nameof(DotNetRocksPlugin),
-                DotNetRocksPlugin.GetShowsFunctionName
+                DotNetRocksPlugin.GetShowsFunctionName,
+                cancellationToken: ct
             )).GetValue<string>();
 
             var showsList = (await kernel.InvokePromptAsync(
@@ -79,7 +84,8 @@ internal class Program
                 ---
                 Show titles as ordered list and ask me to pick one.
                 """,
-                new KernelArguments { ["shows"] = shows }
+                new KernelArguments { ["shows"] = shows },
+                cancellationToken: ct
             )).GetValue<string>();
             ConsoleSpinner.Stop();
 
@@ -89,22 +95,28 @@ internal class Program
             var query = Console.ReadLine() ?? throw new Exception("You have to pick a show.");
 
             ConsoleSpinner.Start("Querying show");
-            var jsonShow = (await kernel.InvokePromptAsync(
+            var pickShowFunction = kernel.CreateFunctionFromPrompt(
                 """
-                Be succinct. Don't explain your reasoning.
                 Select the JSON object from the array below using the given query.
                 If the query is a number, it is likely the "index" property of the JSON objects.
                 ---
                 JSON array: {{$shows}}
                 Query: {{$query}}
-                JSON object:
                 """,
+                executionSettings: new OpenAIPromptExecutionSettings
+                {
+                    ResponseFormat = "json_object"
+                }
+            );
+            var jsonShow = await pickShowFunction.InvokeAsync<string>(
+                kernel,
                 new KernelArguments
                 {
                     ["shows"] = shows,
                     ["query"] = query
-                }
-            )).GetValue<string>();
+                },
+                cancellationToken: ct
+            );
             ConsoleSpinner.Stop();
 
             var show = JsonSerializer.Deserialize<Show>(jsonShow) ??
@@ -123,7 +135,7 @@ internal class Program
     private static async Task TranscribeShow(Show show)
     {
         var collectionName = $"Transcript_{show.Number}";
-        var collections = await memory.GetCollectionsAsync();
+        var collections = await memory.GetCollectionsAsync(cancellationToken: ct);
         if (collections.Contains(collectionName))
         {
             Console.WriteLine("Show already transcribed\n");
@@ -131,14 +143,15 @@ internal class Program
         }
 
         ConsoleSpinner.Start("Transcribing show");
-        var transcript = (await kernel.InvokeAsync(
-            nameof(TranscriptPlugin),
-            TranscriptPlugin.TranscribeFunctionName,
+        var transcript = await kernel.InvokeAsync<string>(
+            nameof(AssemblyAIPlugin),
+            AssemblyAIPlugin.TranscribeFunctionName,
             new KernelArguments
             {
                 ["INPUT"] = show.AudioUrl
-            }
-        )).GetValue<string>();
+            },
+            cancellationToken: ct
+        );
 
         var paragraphs = TextChunker.SplitPlainTextParagraphs(
             TextChunker.SplitPlainTextLines(transcript, 128),
@@ -146,7 +159,12 @@ internal class Program
         );
         for (var i = 0; i < paragraphs.Count; i++)
         {
-            await memory.SaveInformationAsync(collectionName, paragraphs[i], $"paragraph{i}");
+            await memory.SaveInformationAsync(
+                collectionName,
+                paragraphs[i],
+                $"paragraph{i}",
+                cancellationToken: ct
+            );
         }
 
         ConsoleSpinner.Stop();
@@ -156,33 +174,43 @@ internal class Program
     {
         var collectionName = $"Transcript_{show.Number}";
         var askQuestionFunction = kernel.CreateFunctionFromPrompt("""
-        You are a Q&A assistant who will answer questions about the transcript of the given podcast show.
-        ---
-        Here is context from the show transcript: {{$transcript}}
-        ---
-        {{$question}}
-        """);
+                                                                  You are a Q&A assistant who will answer questions about the transcript of the given podcast show.
+                                                                  ---
+                                                                  Here is context from the show transcript: {{$transcript}}
+                                                                  ---
+                                                                  {{$question}}
+                                                                  """);
 
-        while (true)
+        while (!ct.IsCancellationRequested)
         {
             Console.Write("Ask a question: ");
             var question = Console.ReadLine();
 
             ConsoleSpinner.Start("Generating answers");
             var promptBuilder = new StringBuilder();
-            await foreach (var searchResult in memory.SearchAsync(collectionName, question, limit: 3))
+            await foreach (var searchResult in memory.SearchAsync(
+                               collectionName,
+                               question,
+                               limit: 3,
+                               cancellationToken: ct
+                           ))
             {
                 promptBuilder.AppendLine(searchResult.Metadata.Text);
             }
 
             if (promptBuilder.Length == 0) Console.WriteLine("No context retrieved from transcript vector DB.\n");
 
-            var answer = (await askQuestionFunction.InvokeAsync(kernel, new KernelArguments
-            {
-                ["transcript"] = promptBuilder.ToString(),
-                ["question"] = question
-            })).GetValue<string>();
+            var answer = await askQuestionFunction.InvokeAsync<string>(kernel, new KernelArguments
+                {
+                    ["transcript"] = promptBuilder.ToString(),
+                    ["question"] = question
+                },
+                cancellationToken: ct
+            );
             ConsoleSpinner.Stop();
+
+            if (ct.IsCancellationRequested) return;
+
             Console.WriteLine(answer);
         }
     }

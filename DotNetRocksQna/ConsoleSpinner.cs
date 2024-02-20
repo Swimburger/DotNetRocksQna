@@ -15,6 +15,6 @@ public static class ConsoleSpinner
 
     public static void Stop()
     {
-        completionSource?.SetResult();
+        completionSource?.TrySetResult();
     }
 }
