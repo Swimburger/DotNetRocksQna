@@ -69,13 +69,13 @@ internal class Program
 
         try
         {
-            var shows = (await kernel.InvokeAsync(
+            var shows = await kernel.InvokeAsync<string>(
                 nameof(DotNetRocksPlugin),
                 DotNetRocksPlugin.GetShowsFunctionName,
                 cancellationToken: ct
-            )).GetValue<string>();
+            );
 
-            var showsList = (await kernel.InvokePromptAsync(
+            var showsList = await kernel.InvokePromptAsync<string>(
                 """
                 Be succinct.
                 ---
@@ -86,7 +86,7 @@ internal class Program
                 """,
                 new KernelArguments { ["shows"] = shows },
                 cancellationToken: ct
-            )).GetValue<string>();
+            );
             ConsoleSpinner.Stop();
 
             Console.WriteLine(showsList);
